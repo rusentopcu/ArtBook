@@ -12,9 +12,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+            
+        //MARK: - Bar Button Create
+        navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(addButtonClicked))
+        
     }
-
+    
+    //MARK: - Functions
+    @objc func addButtonClicked() {
+        performSegue(withIdentifier: "todetailsVC", sender: self)
+    }
 
 }
 
