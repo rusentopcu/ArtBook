@@ -46,53 +46,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="puq-04-Ubp">
-                                <rect key="frame" x="20" y="133" width="374" height="300"/>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="artist" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1rh-NT-tTA">
-                                <rect key="frame" x="20" y="576" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iXs-Ev-8E5">
-                                <rect key="frame" x="20" y="660" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjc-AY-O7A">
-                                <rect key="frame" x="123" y="701" width="169" height="115"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="select" translatesAutoresizingMaskIntoConstraints="NO" id="puq-04-Ubp">
+                                <rect key="frame" x="57" y="141" width="300" height="250"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="115" id="sQH-6c-cgn"/>
+                                    <constraint firstAttribute="width" constant="300" id="JhS-ko-3Y7"/>
+                                    <constraint firstAttribute="height" constant="250" id="nNo-Q9-Z1c"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjc-AY-O7A">
+                                <rect key="frame" x="123" y="715" width="169" height="115"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="115" id="ejy-jk-9ui"/>
+                                    <constraint firstAttribute="width" constant="169" id="z7s-Zk-F3g"/>
                                 </constraints>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="saveButton:" destination="GGM-vp-uB5" eventType="touchUpInside" id="vDv-4c-NN4"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AFE-4q-xlr">
-                                <rect key="frame" x="20" y="492" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="zhJ-o4-x68">
+                                <rect key="frame" x="20" y="500" width="374" height="182"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AFE-4q-xlr">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="artist" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1rh-NT-tTA">
+                                        <rect key="frame" x="0.0" y="74" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="year" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iXs-Ev-8E5">
+                                        <rect key="frame" x="0.0" y="148" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="1rh-NT-tTA" firstAttribute="trailing" secondItem="iXs-Ev-8E5" secondAttribute="trailing" id="2fG-HJ-uQ1"/>
-                            <constraint firstItem="iXs-Ev-8E5" firstAttribute="top" secondItem="1rh-NT-tTA" secondAttribute="bottom" constant="50" id="8sk-SM-q2b"/>
-                            <constraint firstItem="cjc-AY-O7A" firstAttribute="leading" secondItem="Xld-jR-3KK" secondAttribute="leading" constant="123" id="9Sr-2I-r4u"/>
-                            <constraint firstItem="puq-04-Ubp" firstAttribute="trailing" secondItem="AFE-4q-xlr" secondAttribute="trailing" id="Ahy-RK-lcc"/>
-                            <constraint firstItem="puq-04-Ubp" firstAttribute="leading" secondItem="AFE-4q-xlr" secondAttribute="leading" id="CeE-17-Jun"/>
-                            <constraint firstItem="1rh-NT-tTA" firstAttribute="leading" secondItem="iXs-Ev-8E5" secondAttribute="leading" id="LII-ab-Gbg"/>
-                            <constraint firstItem="cjc-AY-O7A" firstAttribute="top" secondItem="iXs-Ev-8E5" secondAttribute="bottom" constant="7" id="U5v-0r-u7f"/>
-                            <constraint firstItem="AFE-4q-xlr" firstAttribute="trailing" secondItem="1rh-NT-tTA" secondAttribute="trailing" id="aKW-me-GJP"/>
-                            <constraint firstItem="AFE-4q-xlr" firstAttribute="leading" secondItem="1rh-NT-tTA" secondAttribute="leading" id="dTs-zf-ooZ"/>
-                            <constraint firstItem="AFE-4q-xlr" firstAttribute="top" secondItem="puq-04-Ubp" secondAttribute="bottom" constant="59" id="eur-Zy-cPO"/>
-                            <constraint firstItem="iXs-Ev-8E5" firstAttribute="centerX" secondItem="cjc-AY-O7A" secondAttribute="centerX" id="fEg-Xv-yr7"/>
-                            <constraint firstItem="puq-04-Ubp" firstAttribute="leading" secondItem="GUp-0g-r20" secondAttribute="leadingMargin" id="hv3-J8-KWS"/>
-                            <constraint firstItem="puq-04-Ubp" firstAttribute="trailing" secondItem="GUp-0g-r20" secondAttribute="trailingMargin" id="jJj-B4-w84"/>
-                            <constraint firstItem="1rh-NT-tTA" firstAttribute="top" secondItem="AFE-4q-xlr" secondAttribute="bottom" constant="50" id="kzf-HB-vQf"/>
-                            <constraint firstItem="Xld-jR-3KK" firstAttribute="bottom" secondItem="cjc-AY-O7A" secondAttribute="bottom" constant="46" id="plC-cK-9QG"/>
-                            <constraint firstItem="puq-04-Ubp" firstAttribute="top" secondItem="Xld-jR-3KK" secondAttribute="top" constant="45" id="qTd-Fh-iHS"/>
+                            <constraint firstItem="zhJ-o4-x68" firstAttribute="leading" secondItem="Xld-jR-3KK" secondAttribute="leading" constant="20" id="0gg-dY-zbu"/>
+                            <constraint firstItem="cjc-AY-O7A" firstAttribute="leading" secondItem="Xld-jR-3KK" secondAttribute="leading" constant="123" id="4E2-Ty-YgD"/>
+                            <constraint firstItem="zhJ-o4-x68" firstAttribute="top" secondItem="puq-04-Ubp" secondAttribute="bottom" constant="109" id="5kh-bO-ejB"/>
+                            <constraint firstItem="zhJ-o4-x68" firstAttribute="top" secondItem="puq-04-Ubp" secondAttribute="bottom" constant="109" id="Rj6-Tt-Yag"/>
+                            <constraint firstItem="Xld-jR-3KK" firstAttribute="trailing" secondItem="zhJ-o4-x68" secondAttribute="trailing" constant="20" id="Xf5-Kn-TAl"/>
+                            <constraint firstItem="Xld-jR-3KK" firstAttribute="bottom" secondItem="cjc-AY-O7A" secondAttribute="bottom" constant="32" id="bho-Sm-oU1"/>
+                            <constraint firstItem="puq-04-Ubp" firstAttribute="top" secondItem="Xld-jR-3KK" secondAttribute="top" constant="53" id="iB8-Pa-cJJ"/>
+                            <constraint firstItem="Xld-jR-3KK" firstAttribute="trailing" secondItem="puq-04-Ubp" secondAttribute="trailing" constant="57" id="jYk-Hq-dIy"/>
+                            <constraint firstItem="cjc-AY-O7A" firstAttribute="top" secondItem="zhJ-o4-x68" secondAttribute="bottom" constant="33" id="jwR-VL-MKx"/>
+                            <constraint firstItem="Xld-jR-3KK" firstAttribute="trailing" secondItem="cjc-AY-O7A" secondAttribute="trailing" constant="122" id="s3J-AK-Bvz"/>
+                            <constraint firstItem="Xld-jR-3KK" firstAttribute="bottom" secondItem="zhJ-o4-x68" secondAttribute="bottom" constant="180" id="thq-qy-BGC"/>
+                            <constraint firstItem="puq-04-Ubp" firstAttribute="leading" secondItem="Xld-jR-3KK" secondAttribute="leading" constant="57" id="xec-wE-QKV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Xld-jR-3KK"/>
                     </view>
@@ -127,4 +133,7 @@
             <point key="canvasLocation" x="-471" y="97"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="select" width="329" height="250"/>
+    </resources>
 </document>
