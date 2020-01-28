@@ -14,6 +14,7 @@
 		5428048223E024720099678F /* ArtBookver1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5428048023E024720099678F /* ArtBookver1.xcdatamodeld */; };
 		5428048423E024720099678F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5428048323E024720099678F /* Assets.xcassets */; };
 		5428048723E024720099678F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5428048523E024720099678F /* LaunchScreen.storyboard */; };
+		5428049023E031770099678F /* detailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5428048F23E031770099678F /* detailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5428048323E024720099678F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5428048623E024720099678F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5428048823E024720099678F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5428048F23E031770099678F /* detailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +60,9 @@
 		5428047623E024720099678F /* ArtBookver1 */ = {
 			isa = PBXGroup;
 			children = (
+				5428048E23E031570099678F /* View Controllers */,
 				5428047723E024720099678F /* AppDelegate.swift */,
 				5428047923E024720099678F /* SceneDelegate.swift */,
-				5428047B23E024720099678F /* ViewController.swift */,
 				5428047D23E024720099678F /* Main.storyboard */,
 				5428048323E024720099678F /* Assets.xcassets */,
 				5428048523E024720099678F /* LaunchScreen.storyboard */,
@@ -68,6 +70,15 @@
 				5428048023E024720099678F /* ArtBookver1.xcdatamodeld */,
 			);
 			path = ArtBookver1;
+			sourceTree = "<group>";
+		};
+		5428048E23E031570099678F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5428048F23E031770099678F /* detailsVC.swift */,
+				5428047B23E024720099678F /* ViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +154,7 @@
 			files = (
 				5428048223E024720099678F /* ArtBookver1.xcdatamodeld in Sources */,
 				5428047C23E024720099678F /* ViewController.swift in Sources */,
+				5428049023E031770099678F /* detailsVC.swift in Sources */,
 				5428047823E024720099678F /* AppDelegate.swift in Sources */,
 				5428047A23E024720099678F /* SceneDelegate.swift in Sources */,
 			);
