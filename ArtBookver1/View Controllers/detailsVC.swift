@@ -24,8 +24,48 @@ class detailsVC: UIViewController,UIImagePickerControllerDelegate, UINavigationC
         super.viewDidLoad()
         
         if chosenPainting != "" {
-            //Core Data
+            //MARK: - data pull with using a filter
             
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            let contex = appDelegate.persistentContainer.viewContext
+            
+            let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Paintings")
+            let idString = chosenPaintingId?.uuidString
+            fetchRequest.predicate = NSPredicate(format: "id = %@", idString!)
+            fetchRequest.returnsObjectsAsFaults = false
+            
+            
+            do {
+                let results = try contex.fetch(fetchRequest)
+                if results.count > 0 {
+                    
+                    for result in results as! [NSManagedObject] {
+                        
+                        if let name = result.value(forKey: "name") as? String {
+                            nameText.text = name
+                        }
+                        
+                        if let artist = result.value(forKey: "artist") as? String {
+                            artistText.text = artist
+                        }
+                        
+                        if let year = result.value(forKey: "year") as? Int {
+                            yearText.text = String(year)
+                        }
+                        
+                        if let imagedata = result.value(forKey: "image") as? Data {
+                            let image = UIImage(data: imagedata)
+                            imageView.image = image
+                        }
+                        
+                        
+                    }
+                    
+                    
+                }
+            } catch {
+                print("error")
+            }
             
             
         }
