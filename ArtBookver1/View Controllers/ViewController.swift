@@ -14,7 +14,12 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
     //MARK: - Arrays for Data Fetch
     var nameArray = [String]()
     var idArray = [UUID]()
-
+    
+    //MARK: - Selected object variables
+    var selectedPainting = ""
+    var selectedPaintingId: UUID?
+    
+    
     @IBOutlet weak var tableView: UITableView!
     
     
@@ -37,6 +42,7 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
     
     //MARK: - Functions
     @objc func addButtonClicked() {
+        selectedPainting = ""
         performSegue(withIdentifier: "todetailsVC", sender: self)
     }
     
@@ -87,6 +93,23 @@ class ViewController: UIViewController, UITableViewDelegate,UITableViewDataSourc
         cell.textLabel?.text = nameArray[indexPath.row]
         return cell
      }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "todetailsVC" {
+            
+            let destinationVC = segue.destination as! detailsVC
+            destinationVC.chosenPainting = selectedPainting
+            destinationVC.chosenPaintingId = selectedPaintingId
+            
+        }
+    }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedPainting = nameArray[indexPath.row]
+        selectedPaintingId = idArray[indexPath.row]
+        performSegue(withIdentifier: "todetailsVC", sender: nil)
+    }
 
 }
 

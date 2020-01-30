@@ -17,10 +17,27 @@ class detailsVC: UIViewController,UIImagePickerControllerDelegate, UINavigationC
     @IBOutlet weak var artistText: UITextField!
     @IBOutlet weak var yearText: UITextField!
     
-    
+    var chosenPainting = ""
+    var chosenPaintingId: UUID?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if chosenPainting != "" {
+            //Core Data
+            
+            
+            
+        }
+        
+        else {
+            
+            nameText.text = ""
+            artistText.text = ""
+            yearText.text = ""
+            
+        }
+        
 
         //MARK: -Gesture Recognizer = Hide Keyboard
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
