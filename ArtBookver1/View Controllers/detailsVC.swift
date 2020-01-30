@@ -83,6 +83,12 @@ class detailsVC: UIViewController,UIImagePickerControllerDelegate, UINavigationC
             print("error")
         }
         
+        //MARK: -Notification to data add
+        NotificationCenter.default.post(name: NSNotification.Name("newData"), object:nil)
+        
+        //MARK: -Automatic switching between on View Controller
+        self.navigationController?.popViewController(animated: true)
+        
     }
     
 
